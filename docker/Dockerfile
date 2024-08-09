@@ -32,3 +32,5 @@ RUN pip3 --no-cache-dir install --upgrade pip \
     && pip3 --no-cache-dir install flashinfer -i https://flashinfer.ai/whl/cu121/torch2.4/
 
 ENV DEBIAN_FRONTEND=interactive
+
+ENTRYPOINT ["python3", "-m", "sglang.launch_server"]
